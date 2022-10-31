@@ -1,20 +1,27 @@
-import React, { Component , PropTypes} from 'react';
-
-import CSRFToken from './csrftoken';
+import React from 'react'
 
 
-class aForm extends Component {
-    render() {
 
-        return (
-                 <form action="/endpoint" method="post">
-                        <CSRFToken />
-                        <input type="text" name="name" id="" />
-                        <input type="text" name="email" id="" /><br />
-                        <button type="submit">Send</button>
-                 </form>
-        );
-    }
+
+function Contact(props) {
+  
+  
+  let mystyle = {
+    color : props.mode === "dark" ? "white" : "black",
+    backgroundColor : props.mode==="dark" ? "black" : "white"
+  }
+    
+  return (
+    <form action="#" method="POST"> {`{% csrf_token %}`}
+
+    
+
+    
+       <input type="text" name="name" id="" />  <br />
+       Email <input type="text" name="email" id="" /> <br />
+       <input type="submit" value="submit"/>
+    </form>
+  )
 }
 
-export default aForm;
+export default Contact
