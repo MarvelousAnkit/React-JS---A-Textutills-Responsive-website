@@ -18,7 +18,7 @@ export default function Navbar(props) {
         </li>
       
         <li className="nav-item">
-        <NavLink className={`nav-link ${props.color}`} to="">Contact Us</NavLink>
+        <NavLink className={`nav-link ${props.color}`} to="/contact">Contact Us</NavLink>
         </li>
         
       </ul>
